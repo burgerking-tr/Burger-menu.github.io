@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAS Menu</title>
+    <style>
+        /* SIFIRLAMA VE GENEL AYARLAR */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial Black', Impact, sans-serif;
+            background-color: #F5ECE5; /* Acik krem arka plan */
+            color: #502314; /* Koyu kahve tonu */
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        /* CAS LOGO ALANI */
+        .cas-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .cas-logo {
+            height: 120px;
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        /* CAS ANA TASIYICI */
+        .cas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+
+        /* CAS KATEGORI ALANI */
+        .cas-section {
+            margin-bottom: 40px;
+        }
+
+        .cas-title {
+            font-size: 28px;
+            text-transform: uppercase;
+            color: #D62300; /* Kirmizi tonu */
+            border-bottom: 5px solid #F3A900; /* Sari alt cizgi */
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        /* CAS GRID YAPISI */
+        .cas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        /* CAS URUN KARTI */
+        .cas-card {
+            background-color: #FAF6F2;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+            height: 320px;
+        }
+
+        /* KART TIKLAMA VE HOVER EFEKTLERI (AR EKRANI ICIN OZELLISTIRILDI) */
+        .cas-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(80, 35, 20, 0.1);
+            background-color: #ffffff;
+            border-color: #F3A900;
+        }
+
+        .cas-card:active {
+            transform: translateY(0);
+        }
+
+        /* CAS URUN GORSELI */
+        .cas-img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        /* CAS URUN ADI */
+        .cas-name {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        /* MOBIL UYUMLULUK */
+        @media (max-width: 600px) {
+            .cas-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .cas-card {
+                padding: 12px;
+                height: 240px;
+            }
+
+            .cas-img {
+                height: 120px;
+            }
+
+            .cas-name {
+                font-size: 15px;
+            }
+
+            .cas-logo {
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Alani -->
+    <header class="cas-header">
+        <img src="https://i.imgur.com/Xo2mNDi.png" alt="CAS Logo" class="cas-logo">
+    </header>
+
+    <!-- Ana Menu -->
+    <main class="cas-container">
+
+        <!-- BURGERLER -->
+        <section class="cas-section">
+            <h2 class="cas-title">Burgerler</h2>
+            <div class="cas-grid">
+                
+                <!-- Whopper -->
+                <div class="cas-card">
+                    <img src="https://i.imgur.com/if0loxR.png" alt="Whopper" class="cas-img">
+                    <h3 class="cas-name">Whopper</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- YAN URUNLER -->
+        <section class="cas-section">
+            <h2 class="cas-title">Yan Urunler</h2>
+            <div class="cas-grid">
+                
+                <!-- Patates -->
+                <div class="cas-card">
+                    <img src="https://i.imgur.com/U81CANo.png" alt="Patates" class="cas-img">
+                    <h3 class="cas-name">Patates</h3>
+                </div>
+
+                <!-- 6li Nugget -->
+                <div class="cas-card">
+                    <img src="https://i.imgur.com/Hd980gz.png" alt="6li Nugget" class="cas-img">
+                    <h3 class="cas-name">6li Nugget</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ICECEKLER -->
+        <section class="cas-section">
+            <h2 class="cas-title">Icecekler</h2>
+            <div class="cas-grid">
+                
+                <!-- Seftalili Fuse Tea -->
+                <div class="cas-card">
+                    <img src="https://i.imgur.com/p1zFS4y.png" alt="Seftali Fuse Tea" class="cas-img">
+                    <h3 class="cas-name">Seftali Fuse Tea</h3>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
